@@ -5,65 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TC No Kontrol</title>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/site.css">
+    <title>Document</title>
 </head>
 
 <body>
+
     <div class="container mt-5 mb-5">
         <div class="card text-center">
             <div class="card-header">
-                <h1 class="text-primary">TC No Kontrol Uygulamasi</h1>
+                <h1 class="text-primary">Kredi Karti Kontrol Uygulamasi</h1>
             </div>
             <div class="card-body ">
                 <div class="container">
                     <div class="input-group mb-3">
-                        <input id="tcnumara" type="number" class="form-control"
-                            placeholder="11 Haneli TC Numara Giriniz" aria-label="Recipient's username"
+                        <input id="kknumara" type="number" class="form-control"
+                            placeholder="16 Haneli Kredi Karti Numara Giriniz" aria-label="Recipient's username"
                             aria-describedby="basic-addon2">
                         <div class="input-group-append">
                             <button class="btn btn-outline-secondary" type="button" data-toggle="modal"
-                                data-target="#modalekle" onclick="kontrol()">KONTROL
+                                data-target="#modalekle" onclick="kkkontrol()">KONTROL
                                 ET</button>
                         </div>
                     </div>
                 </div>
 
             </div>
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="modalekle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="ModalLongTitle">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+            <div class="row justify-item-center">
+                <div class="col-3"></div>
+                <div class="form-check col-3 ">
+                    <input class="form-check-input" onclick="americanExpress()" type="radio" name="flexRadioDefault"
+                        id="flexRadioDefault1" value="15">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Amerikan Express (15 Hane)
+                    </label>
                 </div>
-                <div class="modal-body" id="ModalBody">
-
-                </div>
-                <div class="modal-footer">
-
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Tekrar Dene</button>
+                <div class="form-check col-3 ">
+                    <input class="form-check-input" onclick="onaltihane()" type="radio" name="flexRadioDefault"
+                        id="flexRadioDefault2" value="16" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        16 Haneli Kredi Kart
+                    </label>
                 </div>
             </div>
+
         </div>
     </div>
 
-    <br><br>
-    <div class="container"><a href="kredikarti.html">
-            <h4>Kredi Kart Kontrol Uygulamasi</h4>
-        </a></div>
+    <div class="container">
+        <strong>
+            <p id="info">Lutfen kart no giriniz.</p>
+        </strong>
+    </div>
 
+    <script src="kartkontrol.js"></script>
 
-
-    <script src="site.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -74,6 +70,5 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 </body>
-
 
 </html>

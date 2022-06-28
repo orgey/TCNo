@@ -35,14 +35,15 @@ function kontrol() {
     }
     let sonucdort = (tcyedikat * 7 - tccikartilan) % 10
     // 4. basamak
-
+    console.log(sonucdort);
     // 5. basamak
+
     let ilkonhane = 0;
     for (let i = 0; i < tcarray.length - 1; i++) {
         ilkonhane += parseInt(tcarray[i]);
     }
     // 5. basamak
-
+    console.log((ilkonhane % 10))
     if (tcarray.length != 11) {
         hata = "TC Numara 11 Haneli olmak zorunda!";
         yanlis(hata);
